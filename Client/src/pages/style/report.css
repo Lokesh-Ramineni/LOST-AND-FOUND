@@ -1,0 +1,220 @@
+/* RESET */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+/* PAGE */
+
+.report-page{
+min-height:100vh;
+background:linear-gradient(180deg,#eef2ff,#f4f6ff);
+display:flex;
+flex-direction:column;
+align-items:center;
+padding:40px 20px;
+}
+
+/* HEADER */
+
+.report-header{
+text-align:center;
+margin-bottom:30px;
+}
+
+.report-logo{
+width:70px;
+height:70px;
+border-radius:18px;
+background:linear-gradient(135deg,#7b2ff7,#3a8bfd);
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:32px;
+color:white;
+margin:auto;
+margin-bottom:10px;
+box-shadow:0 10px 20px rgba(0,0,0,0.15);
+}
+
+.report-header h1{
+font-size:32px;
+color:#6c5cff;
+margin-bottom:6px;
+}
+
+.report-header p{
+color:#666;
+font-size:14px;
+}
+
+/* CARD */
+
+.report-card{
+width:650px;
+background:white;
+padding:35px;
+border-radius:14px;
+box-shadow:0 12px 35px rgba(0,0,0,0.08);
+}
+
+/* LABELS */
+
+.report-card label{
+display:block;
+margin-top:18px;
+margin-bottom:6px;
+font-size:14px;
+color:#333;
+}
+
+/* INPUTS */
+
+.report-card input,
+.report-card select,
+.report-card textarea{
+width:100%;
+padding:12px;
+border-radius:8px;
+border:1px solid #d8dcee;
+font-size:14px;
+outline:none;
+transition:0.2s;
+}
+
+.report-card input:focus,
+.report-card select:focus,
+.report-card textarea:focus{
+border-color:#7b2ff7;
+}
+
+/* TEXTAREA */
+
+.report-card textarea{
+height:110px;
+resize:none;
+}
+
+/* TWO COLUMN ROW */
+
+.row{
+display:flex;
+gap:16px;
+}
+
+.row div{
+flex:1;
+}
+
+/* UPLOAD BOX */
+
+.upload-box{
+margin-top:10px;
+border:2px dashed #d3d8f5;
+border-radius:12px;
+padding:35px;
+text-align:center;
+background:#fafbff;
+cursor:pointer;
+transition:0.2s;
+position:relative;
+}
+
+.upload-box:hover{
+background:#f3f5ff;
+border-color:#7b2ff7;
+}
+
+.upload-box input{
+position:absolute;
+width:100%;
+height:100%;
+opacity:0;
+top:0;
+left:0;
+cursor:pointer;
+}
+
+/* ICON */
+
+.upload-box i{
+font-size:40px;
+color:#9aa3d4;
+margin-bottom:10px;
+}
+
+/* UPLOAD TEXT */
+
+.upload-box p{
+font-size:15px;
+color:#444;
+margin-bottom:4px;
+}
+
+.upload-box span{
+font-size:12px;
+color:#888;
+}
+
+/* SUBMIT BUTTON */
+
+.submit-btn{
+width:100%;
+margin-top:25px;
+padding:14px;
+border:none;
+border-radius:10px;
+font-size:16px;
+font-weight:600;
+color:white;
+cursor:pointer;
+background:linear-gradient(90deg,#7b2ff7,#3a8bfd);
+transition:0.3s;
+}
+
+.submit-btn:hover{
+opacity:0.9;
+}
+
+/* TIP BOX */
+
+.tip{
+margin-top:18px;
+background:#eef3ff;
+border-radius:8px;
+padding:12px;
+font-size:13px;
+color:#4b59c7;
+border:1px solid #d6defe;
+}
+
+/* BACK LINK */
+
+.back{
+    text-align:center;
+    margin-top:15px;
+    font-size:14px;
+    cursor:pointer;
+}
+.back a{
+    text-decoration:none;
+    color:#7b2ff7;
+}
+
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+.report-card{
+width:100%;
+}
+
+.row{
+flex-direction:column;
+}
+
+}
