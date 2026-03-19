@@ -198,7 +198,7 @@ function HomePage() {
                     </div>
 
                     <button
-                        onClick={() => navigate("/items")}
+                        onClick={() => navigate("/getitems")}
                     >
                         View All
                     </button>

@@ -1,9 +1,24 @@
-import { useState } from "react"
+import { useState,useEffect } from "react"
 import axios from "axios"
 import "./style/report.css"
+import { useNavigate } from "react-router-dom"
 
 function ReportFound() {
+    const navigate = useNavigate()
 
+    useEffect(() => {
+        const token = localStorage.getItem("token");
+
+        if (!token) return navigate("/login");
+
+        const payload = JSON.parse(atob(token.split(".")[1]));
+
+        if (payload.exp * 1000 < Date.now()) {
+            localStorage.removeItem("token");
+            navigate("/login");
+        }
+
+    }, []);
     const [title, setTitle] = useState("")
     const [category, setCategory] = useState("")
     const [description, setDescription] = useState("")

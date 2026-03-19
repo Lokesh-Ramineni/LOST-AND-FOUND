@@ -24,6 +24,9 @@ app.use("/uploads",express.static("uploads"))
 const userRoutes = require("./routes/userRoutes")
 
 app.use("/api/user", userRoutes)
+
+
+
 // server start
 app.listen(5000, ()=>{
     console.log("Server running on port 5000")

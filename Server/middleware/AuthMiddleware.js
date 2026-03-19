@@ -12,7 +12,7 @@ const authMiddleware = (req,res,next)=>{
 
     try{
 
-        const decoded = jwt.verify(token,"uihgfsdnflkuwhfirfn")
+        const decoded = jwt.verify(token,process.env.secret_key)
 
         req.user = decoded
 

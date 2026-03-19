@@ -43,6 +43,16 @@ exports.reportItem = async (req,res)=>{
 //         res.status(400).json({message:"Error in accessing data"})
 //     }
 // }
+exports.getItems=async(req,res) =>{
+    
+    try{
+        const item=await Item.find()
+        res.json(item)
+    }
+    catch(e){
+        res.status(400).json({message:"Error in accessing data"})
+    }
+}
 exports.getDashboardStats = async (req,res)=>{
 
     try{

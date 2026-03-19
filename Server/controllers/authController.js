@@ -7,7 +7,9 @@ const jwt=require("jsonwebtoken")
 exports.register=async(req,res)=>{
     try{
         const {username,email,password}=req.body
-
+        check_email=email.split("@")
+        if(check_email[1]!="vitapstudent.ac.in")
+            return res.status(400).json({message:'use only student email'})
         const userExists=await User.findOne({email})
         if(userExists){
             return res.status(400).json({message:'User already exists'})
@@ -46,7 +48,7 @@ exports.login=async(req,res)=>{
         const token = jwt.sign(
             claims,
             secretkey,
-            {expiresIn:"20s"}
+            {expiresIn:"1d"}
         )
         res.json({
             message:"Login successful",
