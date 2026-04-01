@@ -3,7 +3,7 @@ client/node_modules/
 Server/node_modules/
 
 # environment variables
-.env
+.env/
 
 # logs
 npm-debug.log*
