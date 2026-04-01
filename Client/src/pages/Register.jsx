@@ -19,7 +19,7 @@ function Register() {
                 setPassword('')
                 setConfirmPassword('')
             }
-            await axios.post("http://localhost:5000/api/auth/Register",{
+            await axios.post("http://localhost:5000/api/auth/register",{
                 username,
                 email,
                 password
